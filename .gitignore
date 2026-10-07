@@ -1,0 +1,21 @@
+# Datos: se regeneran corriendo el pipeline, no van al repositorio
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
