@@ -153,14 +153,21 @@ class TestPropios(unittest.TestCase):
     - ¿calcular_decada() funciona con un año de otra década, como 2010?
     """
 
-    @unittest.skip("TODO 13: quitá este skip y escribí el test")
     def test_lista_vacia(self):
-        self.fail("Escribí este test")
+        """Verifica que calcular_decada devuelva el formato correcto (ej: 2023 -> '2020s')."""
+        from src.transform import calcular_decada
+        resultado = calcular_decada(2023)
+        self.assertEqual(resultado, "2020s")
 
-    @unittest.skip("TODO 13: quitá este skip y escribí el test")
     def test_a_eleccion(self):
-        self.fail("Escribí este test")
+        """Verifica que clasificar_region asigne la región por defecto ante un destino inexistente."""
+        from src.transform import clasificar_region
+        import config
+        resultado = clasificar_region("PaisInexistenteCualquiera")
+        self.assertEqual(resultado, config.REGION_POR_DEFECTO)
+
 
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+    
